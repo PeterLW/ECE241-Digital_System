@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Nov 08 22:56:11 2014
+Quartus II 32-bit Version : 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition
+Revision Name : snake_vga_test
+Top-level Entity Name : snake_vga_test
+Family : Cyclone II
+Device : EP2C8Q208C8
+Timing Models : Final
+Total logic elements : 2,610 / 8,256 ( 32 % )
+    Total combinational functions : 2,610 / 8,256 ( 32 % )
+    Dedicated logic registers : 470 / 8,256 ( 6 % )
+Total registers : 470
+Total pins : 13 / 138 ( 9 % )
+Total virtual pins : 0
+Total memory bits : 163,840 / 165,888 ( 99 % )
+Embedded Multiplier 9-bit elements : 0 / 36 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )

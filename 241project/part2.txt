@@ -1,0 +1,177 @@
+module sketch
+ (
+  CLOCK_50,      // On Board 50 MHz
+  KEY,       // Push Button[3:0]
+  SW,        // DPDT Switch[17:0]
+  VGA_CLK,         // VGA Clock
+  VGA_HS,       // VGA H_SYNC
+  VGA_VS,       // VGA V_SYNC
+  VGA_BLANK,      // VGA BLANK
+  VGA_SYNC,      // VGA SYNC
+  VGA_R,         // VGA Red[9:0]
+  VGA_G,        // VGA Green[9:0]
+  VGA_B,         // VGA Blue[9:0]
+  LEDR  //THIS IS TO SIMULATE FSM
+ );
+ input   CLOCK_50;    // 50 MHz
+ input [3:0] KEY;     // Button[3:0]
+ input [17:0] SW;      // Switches[0:0]
+ output   VGA_CLK;       // VGA Clock 
+ output   VGA_HS;     // VGA H_SYNC
+ output   VGA_VS;     // VGA V_SYNC
+ output   VGA_BLANK;    // VGA BLANK
+ output   VGA_SYNC;    // VGA SYNC
+ output [9:0] VGA_R;       // VGA Red[9:0]
+ output [9:0] VGA_G;      // VGA Green[9:0]
+ output [9:0] VGA_B;       // VGA Blue[9:0]
+ output [4:0] LEDR;
+ 
+ wire resetn;
+ assign resetn = KEY[0];
+   wire clear;
+   assign clear=KEY[2]; 
+ // Create the color, x, y and writeEn wires that are inputs to the controller.
+ 
+ wire [7:0] x;
+ wire [6:0] y;
+ reg writeEn;
+ wire enbale1;
+ wire enbale2;
+ assign x=SW[7:0];
+ assign y=SW[14:8];
+ reg[7:0]xx;
+ reg[6:0]yy;
+ assign enable1=!KEY[1];
+ assign enable2=1;
+   ///////////////////////////////////////////////////////////////////////////FSM
+ reg [7:0]countx1;
+ reg [6:0]county1;
+ reg [2:0]countx2;
+ reg [2:0]county2;
+ reg [2:0]currentstate;
+ reg [2:0]nextstate;
+ wire[2:0]inputcolor;
+ assign inputcolor=SW[17:15];
+ reg [2:0]color;
+ initial currentstate=3'b000;
+ 
+ parameter A=3'b000, B=3'b001, C=3'b010, D=3'b011, E=3'b100;
+ always@(*)
+ case (currentstate)
+   A:if(!KEY[1]) nextstate=D; 
+    else if(!KEY[2]) nextstate=B;
+    else nextstate=A;
+   B:if(countx1==8'b10011111) nextstate=C;
+     else nextstate=B;
+   C:if(county1<7'b1110111) nextstate=B;
+     else nextstate=A;
+   D:if(countx2==3'b101) nextstate=E;
+     else nextstate=D;
+   E:if(county2<3'b101) nextstate=D;
+     else nextstate=A;
+  endcase
+//////////////////////////////////////////////////////////////////////////////////define output
+ always@(posedge CLOCK_50)
+ case(currentstate)
+ B:begin
+   xx<=countx1;
+   yy<=county1;
+   color<=3'b000;
+   writeEn<=enable2;
+  end
+ C:begin
+   xx<=countx1;
+   yy<=county1;
+   //color<=3'b000;
+   //writeEn<=enable2;
+  end
+ D:begin
+   xx<=x+countx2;
+   yy<=y+county2;
+   if(county2>2)
+   begin
+    color[0]=!inputcolor[0];
+    color[1]=!inputcolor[1];
+    color[2]=!inputcolor[2];
+   end
+   else
+    color<=inputcolor;
+   writeEn<=enable1;
+  end
+ E:begin
+   xx<=x+countx2;
+   yy<=y+county2;
+   /*if(county2>2)
+   begin
+    color[0]=!inputcolor[0];
+    color[1]=!inputcolor[1];
+    color[2]=!inputcolor[2];
+   end
+   else
+    color<=inputcolor;
+   writeEn<=enable1;
+  */
+  end
+ endcase
+ ////////////////////////////////////////////////////////////////////////////Counterx1
+ always@(posedge CLOCK_50)
+ begin
+  currentstate<=nextstate;
+  if(currentstate==B)
+    if(countx1<8'b10011111)
+     countx1<=countx1+1;
+    else
+     countx1<=8'b00000000;
+ ////////////////////////////////////////////////////////////////////////////Countery1
+  if(currentstate==C)
+    if(county1<7'b1110111)
+     county1<=county1+1;
+    else
+     county1<=7'b0000000;
+ ////////////////////////////////////////////////////////////////////////////Counterx2
+  if(currentstate==D)
+    if(countx2<3'b101)
+     countx2<=countx2+1;
+    else
+     countx2<=3'b000;
+ ////////////////////////////////////////////////////////////////////////////Countery2
+  if(currentstate==E)
+    if(county2<3'b101)
+     county2<=county2+1;
+    else
+     county2<=3'b000;
+ end
+ ///////////////////////////////////////////////////////////////////////////////
+ 
+ //assign the states to the LEDRs for examination
+ assign LEDR=nextstate;
+ 
+ // Create an Instance of a VGA controller - there can be only one!
+ // Define the number of colours as well as the initial background
+ // image file (.MIF) for the controller.
+ vga_adapter VGA(
+   .resetn(resetn),
+   .clock(CLOCK_50),
+   .colour(color),
+   .x(xx),
+   .y(yy),
+   .plot(writeEn),
+   /* Signals for the DAC to drive the monitor. */
+   .VGA_R(VGA_R),
+   .VGA_G(VGA_G),
+   .VGA_B(VGA_B),
+   .VGA_HS(VGA_HS),
+   .VGA_VS(VGA_VS),
+   .VGA_BLANK(VGA_BLANK),
+   .VGA_SYNC(VGA_SYNC),
+   .VGA_CLK(VGA_CLK));
+  defparam VGA.RESOLUTION = "160x120";
+  defparam VGA.MONOCHROME = "FALSE";
+  defparam VGA.BITS_PER_COLOUR_CHANNEL = 1;
+  defparam VGA.BACKGROUND_IMAGE = "display.mif";
+  
+   
+ // Put your code here. Your code should produce signals x,y,color and writeEn
+ // for the VGA controller, in addition to any other functionality your design may require.
+ endmodule
+ 

@@ -1,0 +1,177 @@
+|part4
+SW[0] => always0.IN0
+SW[0] => always0.IN0
+SW[0] => always0.IN0
+SW[0] => always0.IN0
+SW[1] => always0.IN1
+SW[1] => always0.IN1
+SW[1] => always0.IN1
+SW[1] => always0.IN1
+CLOCK_50 => CLOCK_50.IN4
+
+
+|part4|fullspeed:z1
+CLOCK_50 => counter[0].CLK
+CLOCK_50 => counter[1].CLK
+CLOCK_50 => counter[2].CLK
+CLOCK_50 => counter[3].CLK
+CLOCK_50 => counter[4].CLK
+CLOCK_50 => counter[5].CLK
+CLOCK_50 => counter[6].CLK
+CLOCK_50 => counter[7].CLK
+CLOCK_50 => counter[8].CLK
+CLOCK_50 => counter[9].CLK
+CLOCK_50 => counter[10].CLK
+CLOCK_50 => counter[11].CLK
+CLOCK_50 => counter[12].CLK
+CLOCK_50 => counter[13].CLK
+CLOCK_50 => counter[14].CLK
+CLOCK_50 => counter[15].CLK
+CLOCK_50 => counter[16].CLK
+CLOCK_50 => counter[17].CLK
+CLOCK_50 => counter[18].CLK
+CLOCK_50 => counter[19].CLK
+CLOCK_50 => counter[20].CLK
+CLOCK_50 => counter[21].CLK
+CLOCK_50 => counter[22].CLK
+CLOCK_50 => counter[23].CLK
+CLOCK_50 => counter[24].CLK
+CLOCK_50 => counter[25].CLK
+
+
+|part4|oneHz:z2
+CLOCK_50 => counter[0].CLK
+CLOCK_50 => counter[1].CLK
+CLOCK_50 => counter[2].CLK
+CLOCK_50 => counter[3].CLK
+CLOCK_50 => counter[4].CLK
+CLOCK_50 => counter[5].CLK
+CLOCK_50 => counter[6].CLK
+CLOCK_50 => counter[7].CLK
+CLOCK_50 => counter[8].CLK
+CLOCK_50 => counter[9].CLK
+CLOCK_50 => counter[10].CLK
+CLOCK_50 => counter[11].CLK
+CLOCK_50 => counter[12].CLK
+CLOCK_50 => counter[13].CLK
+CLOCK_50 => counter[14].CLK
+CLOCK_50 => counter[15].CLK
+CLOCK_50 => counter[16].CLK
+CLOCK_50 => counter[17].CLK
+CLOCK_50 => counter[18].CLK
+CLOCK_50 => counter[19].CLK
+CLOCK_50 => counter[20].CLK
+CLOCK_50 => counter[21].CLK
+CLOCK_50 => counter[22].CLK
+CLOCK_50 => counter[23].CLK
+CLOCK_50 => counter[24].CLK
+CLOCK_50 => counter[25].CLK
+
+
+|part4|halfHz:z3
+CLOCK_50 => counter[0].CLK
+CLOCK_50 => counter[1].CLK
+CLOCK_50 => counter[2].CLK
+CLOCK_50 => counter[3].CLK
+CLOCK_50 => counter[4].CLK
+CLOCK_50 => counter[5].CLK
+CLOCK_50 => counter[6].CLK
+CLOCK_50 => counter[7].CLK
+CLOCK_50 => counter[8].CLK
+CLOCK_50 => counter[9].CLK
+CLOCK_50 => counter[10].CLK
+CLOCK_50 => counter[11].CLK
+CLOCK_50 => counter[12].CLK
+CLOCK_50 => counter[13].CLK
+CLOCK_50 => counter[14].CLK
+CLOCK_50 => counter[15].CLK
+CLOCK_50 => counter[16].CLK
+CLOCK_50 => counter[17].CLK
+CLOCK_50 => counter[18].CLK
+CLOCK_50 => counter[19].CLK
+CLOCK_50 => counter[20].CLK
+CLOCK_50 => counter[21].CLK
+CLOCK_50 => counter[22].CLK
+CLOCK_50 => counter[23].CLK
+CLOCK_50 => counter[24].CLK
+CLOCK_50 => counter[25].CLK
+CLOCK_50 => counter[26].CLK
+
+
+|part4|quarterHz:z4
+CLOCK_50 => counter[0].CLK
+CLOCK_50 => counter[1].CLK
+CLOCK_50 => counter[2].CLK
+CLOCK_50 => counter[3].CLK
+CLOCK_50 => counter[4].CLK
+CLOCK_50 => counter[5].CLK
+CLOCK_50 => counter[6].CLK
+CLOCK_50 => counter[7].CLK
+CLOCK_50 => counter[8].CLK
+CLOCK_50 => counter[9].CLK
+CLOCK_50 => counter[10].CLK
+CLOCK_50 => counter[11].CLK
+CLOCK_50 => counter[12].CLK
+CLOCK_50 => counter[13].CLK
+CLOCK_50 => counter[14].CLK
+CLOCK_50 => counter[15].CLK
+CLOCK_50 => counter[16].CLK
+CLOCK_50 => counter[17].CLK
+CLOCK_50 => counter[18].CLK
+CLOCK_50 => counter[19].CLK
+CLOCK_50 => counter[20].CLK
+CLOCK_50 => counter[21].CLK
+CLOCK_50 => counter[22].CLK
+CLOCK_50 => counter[23].CLK
+CLOCK_50 => counter[24].CLK
+CLOCK_50 => counter[25].CLK
+CLOCK_50 => counter[26].CLK
+CLOCK_50 => counter[27].CLK
+
+
+|part4|bit3Tff:u1
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+
+
+|part4|showDecimal0:y0
+a[0] => Decoder0.IN2
+a[1] => Decoder0.IN1
+a[2] => Decoder0.IN0
+
+
+|part4|showDecimal1:y1
+a[0] => Decoder0.IN2
+a[1] => Decoder0.IN1
+a[2] => Decoder0.IN0
+a[2] => hex[6].DATAIN
+
+
+|part4|showDecimal2:y2
+a[0] => Decoder0.IN2
+a[1] => Decoder0.IN1
+a[2] => Decoder0.IN0
+
+
+|part4|showDecimal3:y3
+a[0] => Decoder0.IN2
+a[1] => Decoder0.IN1
+a[1] => hex[6].DATAIN
+a[2] => Decoder0.IN0
+
+
+|part4|showDecimal4:y4
+a[0] => Decoder0.IN2
+a[1] => Decoder0.IN1
+a[2] => Decoder0.IN0
+
+
+|part4|showDecimal5:y5
+a[0] => Decoder1.IN2
+a[1] => Decoder0.IN1
+a[1] => Decoder1.IN1
+a[2] => Decoder0.IN0
+a[2] => Decoder1.IN0
+
+

@@ -1,0 +1,69 @@
+|part1
+SW[0] => SW[0].IN8
+SW[1] => SW[1].IN1
+KEY[0] => KEY[0].IN8
+KEY[1] => ~NO_FANOUT~
+
+
+|part1|TFF2:u1
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+
+
+|part1|TFF2:u2
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+
+
+|part1|TFF2:u3
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+
+
+|part1|TFF2:u4
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+
+
+|part1|TFF2:u5
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+
+
+|part1|TFF2:u6
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+
+
+|part1|TFF2:u7
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+
+
+|part1|TFF2:u8
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+
+
+|part1|seg2:v1
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+
+
+|part1|seg2:v2
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+
+

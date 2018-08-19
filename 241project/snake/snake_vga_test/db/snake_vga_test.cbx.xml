@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="snake_vga_test">
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_vga_test|over_rom:U13|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_kmb1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_vga_test|ready_rom:U7|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_tl91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_vga_test|win_rom:U10|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_mf91.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,847 @@
+Simulator report for part3
+Fri Oct 24 01:03:25 2014
+Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 ns     ;
+; Simulation Netlist Size     ; 365 nodes    ;
+; Simulation Coverage         ;       7.42 % ;
+; Total Number of Transitions ; 129          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                              ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                           ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                 ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                  ;               ;
+; Vector input source                                                                        ; C:/Users/LostWolf/Desktop/ece241 lab/3/Waveform1.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                   ; On            ;
+; Check outputs                                                                              ; Off                                                  ; Off           ;
+; Report simulation coverage                                                                 ; On                                                   ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                   ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                   ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                   ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                  ; Off           ;
+; Detect glitches                                                                            ; Off                                                  ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                  ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                  ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                  ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                  ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                   ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                           ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                  ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                  ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                 ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 32-bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       7.42 % ;
+; Total nodes checked                                 ; 365          ;
+; Total output ports checked                          ; 364          ;
+; Total output ports with complete 1/0-value coverage ; 27           ;
+; Total output ports with no 1/0-value coverage       ; 321          ;
+; Total output ports with no 1-value coverage         ; 324          ;
+; Total output ports with no 0-value coverage         ; 334          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                        ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |part3|w[0]                    ; |part3|w[0]                    ; out0             ;
+; |part3|w~0                     ; |part3|w~0                     ; out0             ;
+; |part3|w~26                    ; |part3|w~26                    ; out0             ;
+; |part3|w~53                    ; |part3|w~53                    ; out0             ;
+; |part3|w[4]                    ; |part3|w[4]                    ; out0             ;
+; |part3|SW[0]                   ; |part3|SW[0]                   ; out              ;
+; |part3|SW[1]                   ; |part3|SW[1]                   ; out              ;
+; |part3|CLOCK_50                ; |part3|CLOCK_50                ; out              ;
+; |part3|HEX0[0]                 ; |part3|HEX0[0]                 ; pin_out          ;
+; |part3|HEX0[3]                 ; |part3|HEX0[3]                 ; pin_out          ;
+; |part3|HEX0[4]                 ; |part3|HEX0[4]                 ; pin_out          ;
+; |part3|hexseg:h0|WideOr2       ; |part3|hexseg:h0|WideOr2       ; out0             ;
+; |part3|hexseg:h0|WideOr3       ; |part3|hexseg:h0|WideOr3       ; out0             ;
+; |part3|hexseg:h0|WideOr6       ; |part3|hexseg:h0|WideOr6       ; out0             ;
+; |part3|counter_28bit:c2|Q[0]   ; |part3|counter_28bit:c2|Q[0]   ; regout           ;
+; |part3|counter_28bit:c2|Q[1]   ; |part3|counter_28bit:c2|Q[1]   ; regout           ;
+; |part3|counter_27bit:c1|Q[0]   ; |part3|counter_27bit:c1|Q[0]   ; regout           ;
+; |part3|counter_27bit:c1|Q[1]   ; |part3|counter_27bit:c1|Q[1]   ; regout           ;
+; |part3|counter_26bit:c0|Q[0]   ; |part3|counter_26bit:c0|Q[0]   ; regout           ;
+; |part3|counter_26bit:c0|Q[1]   ; |part3|counter_26bit:c0|Q[1]   ; regout           ;
+; |part3|hexseg:h0|Decoder0~1    ; |part3|hexseg:h0|Decoder0~1    ; out              ;
+; |part3|counter_28bit:c2|Add0~0 ; |part3|counter_28bit:c2|Add0~0 ; out0             ;
+; |part3|counter_28bit:c2|Add0~1 ; |part3|counter_28bit:c2|Add0~1 ; out0             ;
+; |part3|counter_27bit:c1|Add0~0 ; |part3|counter_27bit:c1|Add0~0 ; out0             ;
+; |part3|counter_27bit:c1|Add0~1 ; |part3|counter_27bit:c1|Add0~1 ; out0             ;
+; |part3|counter_26bit:c0|Add0~0 ; |part3|counter_26bit:c0|Add0~0 ; out0             ;
+; |part3|counter_26bit:c0|Add0~1 ; |part3|counter_26bit:c0|Add0~1 ; out0             ;
++--------------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                             ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |part3|w~1                      ; |part3|w~1                      ; out0             ;
+; |part3|w~2                      ; |part3|w~2                      ; out0             ;
+; |part3|w~3                      ; |part3|w~3                      ; out0             ;
+; |part3|w~4                      ; |part3|w~4                      ; out0             ;
+; |part3|w~5                      ; |part3|w~5                      ; out0             ;
+; |part3|w~6                      ; |part3|w~6                      ; out0             ;
+; |part3|w~7                      ; |part3|w~7                      ; out0             ;
+; |part3|w~8                      ; |part3|w~8                      ; out0             ;
+; |part3|w~9                      ; |part3|w~9                      ; out0             ;
+; |part3|w~10                     ; |part3|w~10                     ; out0             ;
+; |part3|w~11                     ; |part3|w~11                     ; out0             ;
+; |part3|w~12                     ; |part3|w~12                     ; out0             ;
+; |part3|w~13                     ; |part3|w~13                     ; out0             ;
+; |part3|w~14                     ; |part3|w~14                     ; out0             ;
+; |part3|w~15                     ; |part3|w~15                     ; out0             ;
+; |part3|w~16                     ; |part3|w~16                     ; out0             ;
+; |part3|w~17                     ; |part3|w~17                     ; out0             ;
+; |part3|w~18                     ; |part3|w~18                     ; out0             ;
+; |part3|w~19                     ; |part3|w~19                     ; out0             ;
+; |part3|w~20                     ; |part3|w~20                     ; out0             ;
+; |part3|w~21                     ; |part3|w~21                     ; out0             ;
+; |part3|w~22                     ; |part3|w~22                     ; out0             ;
+; |part3|w~23                     ; |part3|w~23                     ; out0             ;
+; |part3|w~24                     ; |part3|w~24                     ; out0             ;
+; |part3|w~25                     ; |part3|w~25                     ; out0             ;
+; |part3|w[1]                     ; |part3|w[1]                     ; out0             ;
+; |part3|w~27                     ; |part3|w~27                     ; out0             ;
+; |part3|w~28                     ; |part3|w~28                     ; out0             ;
+; |part3|w~29                     ; |part3|w~29                     ; out0             ;
+; |part3|w~30                     ; |part3|w~30                     ; out0             ;
+; |part3|w~31                     ; |part3|w~31                     ; out0             ;
+; |part3|w~32                     ; |part3|w~32                     ; out0             ;
+; |part3|w~33                     ; |part3|w~33                     ; out0             ;
+; |part3|w~34                     ; |part3|w~34                     ; out0             ;
+; |part3|w~35                     ; |part3|w~35                     ; out0             ;
+; |part3|w~36                     ; |part3|w~36                     ; out0             ;
+; |part3|w~37                     ; |part3|w~37                     ; out0             ;
+; |part3|w~38                     ; |part3|w~38                     ; out0             ;
+; |part3|w~39                     ; |part3|w~39                     ; out0             ;
+; |part3|w~40                     ; |part3|w~40                     ; out0             ;
+; |part3|w~41                     ; |part3|w~41                     ; out0             ;
+; |part3|w~42                     ; |part3|w~42                     ; out0             ;
+; |part3|w~43                     ; |part3|w~43                     ; out0             ;
+; |part3|w~44                     ; |part3|w~44                     ; out0             ;
+; |part3|w~45                     ; |part3|w~45                     ; out0             ;
+; |part3|w~46                     ; |part3|w~46                     ; out0             ;
+; |part3|w~47                     ; |part3|w~47                     ; out0             ;
+; |part3|w~48                     ; |part3|w~48                     ; out0             ;
+; |part3|w~49                     ; |part3|w~49                     ; out0             ;
+; |part3|w~50                     ; |part3|w~50                     ; out0             ;
+; |part3|w~51                     ; |part3|w~51                     ; out0             ;
+; |part3|w~52                     ; |part3|w~52                     ; out0             ;
+; |part3|w[2]                     ; |part3|w[2]                     ; out0             ;
+; |part3|w~54                     ; |part3|w~54                     ; out0             ;
+; |part3|w~55                     ; |part3|w~55                     ; out0             ;
+; |part3|w~56                     ; |part3|w~56                     ; out0             ;
+; |part3|w~57                     ; |part3|w~57                     ; out0             ;
+; |part3|w~58                     ; |part3|w~58                     ; out0             ;
+; |part3|w~59                     ; |part3|w~59                     ; out0             ;
+; |part3|w~60                     ; |part3|w~60                     ; out0             ;
+; |part3|w~61                     ; |part3|w~61                     ; out0             ;
+; |part3|w~62                     ; |part3|w~62                     ; out0             ;
+; |part3|w~63                     ; |part3|w~63                     ; out0             ;
+; |part3|w~64                     ; |part3|w~64                     ; out0             ;
+; |part3|w~65                     ; |part3|w~65                     ; out0             ;
+; |part3|w~66                     ; |part3|w~66                     ; out0             ;
+; |part3|w~67                     ; |part3|w~67                     ; out0             ;
+; |part3|w~68                     ; |part3|w~68                     ; out0             ;
+; |part3|w~69                     ; |part3|w~69                     ; out0             ;
+; |part3|w~70                     ; |part3|w~70                     ; out0             ;
+; |part3|w~71                     ; |part3|w~71                     ; out0             ;
+; |part3|w~72                     ; |part3|w~72                     ; out0             ;
+; |part3|w~73                     ; |part3|w~73                     ; out0             ;
+; |part3|w~74                     ; |part3|w~74                     ; out0             ;
+; |part3|w~75                     ; |part3|w~75                     ; out0             ;
+; |part3|w~76                     ; |part3|w~76                     ; out0             ;
+; |part3|w~77                     ; |part3|w~77                     ; out0             ;
+; |part3|w~78                     ; |part3|w~78                     ; out0             ;
+; |part3|w~79                     ; |part3|w~79                     ; out0             ;
+; |part3|w~80                     ; |part3|w~80                     ; out0             ;
+; |part3|w[3]                     ; |part3|w[3]                     ; out0             ;
+; |part3|w~81                     ; |part3|w~81                     ; out0             ;
+; |part3|w~82                     ; |part3|w~82                     ; out0             ;
+; |part3|SW[2]                    ; |part3|SW[2]                    ; out              ;
+; |part3|SW[3]                    ; |part3|SW[3]                    ; out              ;
+; |part3|HEX0[1]                  ; |part3|HEX0[1]                  ; pin_out          ;
+; |part3|HEX0[6]                  ; |part3|HEX0[6]                  ; pin_out          ;
+; |part3|hexseg:h0|WideOr0        ; |part3|hexseg:h0|WideOr0        ; out0             ;
+; |part3|hexseg:h0|WideOr5        ; |part3|hexseg:h0|WideOr5        ; out0             ;
+; |part3|counter_4bit:c3|Q[3]     ; |part3|counter_4bit:c3|Q[3]     ; regout           ;
+; |part3|counter_4bit:c3|Q[2]     ; |part3|counter_4bit:c3|Q[2]     ; regout           ;
+; |part3|counter_28bit:c2|Q[27]   ; |part3|counter_28bit:c2|Q[27]   ; regout           ;
+; |part3|counter_28bit:c2|Q[26]   ; |part3|counter_28bit:c2|Q[26]   ; regout           ;
+; |part3|counter_28bit:c2|Q[25]   ; |part3|counter_28bit:c2|Q[25]   ; regout           ;
+; |part3|counter_28bit:c2|Q[24]   ; |part3|counter_28bit:c2|Q[24]   ; regout           ;
+; |part3|counter_28bit:c2|Q[23]   ; |part3|counter_28bit:c2|Q[23]   ; regout           ;
+; |part3|counter_28bit:c2|Q[22]   ; |part3|counter_28bit:c2|Q[22]   ; regout           ;
+; |part3|counter_28bit:c2|Q[21]   ; |part3|counter_28bit:c2|Q[21]   ; regout           ;
+; |part3|counter_28bit:c2|Q[20]   ; |part3|counter_28bit:c2|Q[20]   ; regout           ;
+; |part3|counter_28bit:c2|Q[19]   ; |part3|counter_28bit:c2|Q[19]   ; regout           ;
+; |part3|counter_28bit:c2|Q[18]   ; |part3|counter_28bit:c2|Q[18]   ; regout           ;
+; |part3|counter_28bit:c2|Q[17]   ; |part3|counter_28bit:c2|Q[17]   ; regout           ;
+; |part3|counter_28bit:c2|Q[16]   ; |part3|counter_28bit:c2|Q[16]   ; regout           ;
+; |part3|counter_28bit:c2|Q[15]   ; |part3|counter_28bit:c2|Q[15]   ; regout           ;
+; |part3|counter_28bit:c2|Q[14]   ; |part3|counter_28bit:c2|Q[14]   ; regout           ;
+; |part3|counter_28bit:c2|Q[13]   ; |part3|counter_28bit:c2|Q[13]   ; regout           ;
+; |part3|counter_28bit:c2|Q[12]   ; |part3|counter_28bit:c2|Q[12]   ; regout           ;
+; |part3|counter_28bit:c2|Q[11]   ; |part3|counter_28bit:c2|Q[11]   ; regout           ;
+; |part3|counter_28bit:c2|Q[10]   ; |part3|counter_28bit:c2|Q[10]   ; regout           ;
+; |part3|counter_28bit:c2|Q[9]    ; |part3|counter_28bit:c2|Q[9]    ; regout           ;
+; |part3|counter_28bit:c2|Q[8]    ; |part3|counter_28bit:c2|Q[8]    ; regout           ;
+; |part3|counter_28bit:c2|Q[7]    ; |part3|counter_28bit:c2|Q[7]    ; regout           ;
+; |part3|counter_28bit:c2|Q[6]    ; |part3|counter_28bit:c2|Q[6]    ; regout           ;
+; |part3|counter_28bit:c2|Q[5]    ; |part3|counter_28bit:c2|Q[5]    ; regout           ;
+; |part3|counter_28bit:c2|Q[4]    ; |part3|counter_28bit:c2|Q[4]    ; regout           ;
+; |part3|counter_28bit:c2|Q[3]    ; |part3|counter_28bit:c2|Q[3]    ; regout           ;
+; |part3|counter_27bit:c1|Q[26]   ; |part3|counter_27bit:c1|Q[26]   ; regout           ;
+; |part3|counter_27bit:c1|Q[25]   ; |part3|counter_27bit:c1|Q[25]   ; regout           ;
+; |part3|counter_27bit:c1|Q[24]   ; |part3|counter_27bit:c1|Q[24]   ; regout           ;
+; |part3|counter_27bit:c1|Q[23]   ; |part3|counter_27bit:c1|Q[23]   ; regout           ;
+; |part3|counter_27bit:c1|Q[22]   ; |part3|counter_27bit:c1|Q[22]   ; regout           ;
+; |part3|counter_27bit:c1|Q[21]   ; |part3|counter_27bit:c1|Q[21]   ; regout           ;
+; |part3|counter_27bit:c1|Q[20]   ; |part3|counter_27bit:c1|Q[20]   ; regout           ;
+; |part3|counter_27bit:c1|Q[19]   ; |part3|counter_27bit:c1|Q[19]   ; regout           ;
+; |part3|counter_27bit:c1|Q[18]   ; |part3|counter_27bit:c1|Q[18]   ; regout           ;
+; |part3|counter_27bit:c1|Q[17]   ; |part3|counter_27bit:c1|Q[17]   ; regout           ;
+; |part3|counter_27bit:c1|Q[16]   ; |part3|counter_27bit:c1|Q[16]   ; regout           ;
+; |part3|counter_27bit:c1|Q[15]   ; |part3|counter_27bit:c1|Q[15]   ; regout           ;
+; |part3|counter_27bit:c1|Q[14]   ; |part3|counter_27bit:c1|Q[14]   ; regout           ;
+; |part3|counter_27bit:c1|Q[13]   ; |part3|counter_27bit:c1|Q[13]   ; regout           ;
+; |part3|counter_27bit:c1|Q[12]   ; |part3|counter_27bit:c1|Q[12]   ; regout           ;
+; |part3|counter_27bit:c1|Q[11]   ; |part3|counter_27bit:c1|Q[11]   ; regout           ;
+; |part3|counter_27bit:c1|Q[10]   ; |part3|counter_27bit:c1|Q[10]   ; regout           ;
+; |part3|counter_27bit:c1|Q[9]    ; |part3|counter_27bit:c1|Q[9]    ; regout           ;
+; |part3|counter_27bit:c1|Q[8]    ; |part3|counter_27bit:c1|Q[8]    ; regout           ;
+; |part3|counter_27bit:c1|Q[7]    ; |part3|counter_27bit:c1|Q[7]    ; regout           ;
+; |part3|counter_27bit:c1|Q[6]    ; |part3|counter_27bit:c1|Q[6]    ; regout           ;
+; |part3|counter_27bit:c1|Q[5]    ; |part3|counter_27bit:c1|Q[5]    ; regout           ;
+; |part3|counter_27bit:c1|Q[4]    ; |part3|counter_27bit:c1|Q[4]    ; regout           ;
+; |part3|counter_27bit:c1|Q[3]    ; |part3|counter_27bit:c1|Q[3]    ; regout           ;
+; |part3|counter_26bit:c0|Q[25]   ; |part3|counter_26bit:c0|Q[25]   ; regout           ;
+; |part3|counter_26bit:c0|Q[24]   ; |part3|counter_26bit:c0|Q[24]   ; regout           ;
+; |part3|counter_26bit:c0|Q[23]   ; |part3|counter_26bit:c0|Q[23]   ; regout           ;
+; |part3|counter_26bit:c0|Q[22]   ; |part3|counter_26bit:c0|Q[22]   ; regout           ;
+; |part3|counter_26bit:c0|Q[21]   ; |part3|counter_26bit:c0|Q[21]   ; regout           ;
+; |part3|counter_26bit:c0|Q[20]   ; |part3|counter_26bit:c0|Q[20]   ; regout           ;
+; |part3|counter_26bit:c0|Q[19]   ; |part3|counter_26bit:c0|Q[19]   ; regout           ;
+; |part3|counter_26bit:c0|Q[18]   ; |part3|counter_26bit:c0|Q[18]   ; regout           ;
+; |part3|counter_26bit:c0|Q[17]   ; |part3|counter_26bit:c0|Q[17]   ; regout           ;
+; |part3|counter_26bit:c0|Q[16]   ; |part3|counter_26bit:c0|Q[16]   ; regout           ;
+; |part3|counter_26bit:c0|Q[15]   ; |part3|counter_26bit:c0|Q[15]   ; regout           ;
+; |part3|counter_26bit:c0|Q[14]   ; |part3|counter_26bit:c0|Q[14]   ; regout           ;
+; |part3|counter_26bit:c0|Q[13]   ; |part3|counter_26bit:c0|Q[13]   ; regout           ;
+; |part3|counter_26bit:c0|Q[12]   ; |part3|counter_26bit:c0|Q[12]   ; regout           ;
+; |part3|counter_26bit:c0|Q[11]   ; |part3|counter_26bit:c0|Q[11]   ; regout           ;
+; |part3|counter_26bit:c0|Q[10]   ; |part3|counter_26bit:c0|Q[10]   ; regout           ;
+; |part3|counter_26bit:c0|Q[9]    ; |part3|counter_26bit:c0|Q[9]    ; regout           ;
+; |part3|counter_26bit:c0|Q[8]    ; |part3|counter_26bit:c0|Q[8]    ; regout           ;
+; |part3|counter_26bit:c0|Q[7]    ; |part3|counter_26bit:c0|Q[7]    ; regout           ;
+; |part3|counter_26bit:c0|Q[6]    ; |part3|counter_26bit:c0|Q[6]    ; regout           ;
+; |part3|counter_26bit:c0|Q[5]    ; |part3|counter_26bit:c0|Q[5]    ; regout           ;
+; |part3|counter_26bit:c0|Q[4]    ; |part3|counter_26bit:c0|Q[4]    ; regout           ;
+; |part3|counter_26bit:c0|Q[3]    ; |part3|counter_26bit:c0|Q[3]    ; regout           ;
+; |part3|hexseg:h0|Decoder0~0     ; |part3|hexseg:h0|Decoder0~0     ; out              ;
+; |part3|hexseg:h0|Decoder0~3     ; |part3|hexseg:h0|Decoder0~3     ; out              ;
+; |part3|hexseg:h0|Decoder0~4     ; |part3|hexseg:h0|Decoder0~4     ; out              ;
+; |part3|hexseg:h0|Decoder0~5     ; |part3|hexseg:h0|Decoder0~5     ; out              ;
+; |part3|hexseg:h0|Decoder0~6     ; |part3|hexseg:h0|Decoder0~6     ; out              ;
+; |part3|hexseg:h0|Decoder0~7     ; |part3|hexseg:h0|Decoder0~7     ; out              ;
+; |part3|hexseg:h0|Decoder0~8     ; |part3|hexseg:h0|Decoder0~8     ; out              ;
+; |part3|hexseg:h0|Decoder0~9     ; |part3|hexseg:h0|Decoder0~9     ; out              ;
+; |part3|hexseg:h0|Decoder0~10    ; |part3|hexseg:h0|Decoder0~10    ; out              ;
+; |part3|hexseg:h0|Decoder0~11    ; |part3|hexseg:h0|Decoder0~11    ; out              ;
+; |part3|hexseg:h0|Decoder0~12    ; |part3|hexseg:h0|Decoder0~12    ; out              ;
+; |part3|hexseg:h0|Decoder0~13    ; |part3|hexseg:h0|Decoder0~13    ; out              ;
+; |part3|hexseg:h0|Decoder0~14    ; |part3|hexseg:h0|Decoder0~14    ; out              ;
+; |part3|counter_4bit:c3|Add0~1   ; |part3|counter_4bit:c3|Add0~1   ; out0             ;
+; |part3|counter_4bit:c3|Add0~2   ; |part3|counter_4bit:c3|Add0~2   ; out0             ;
+; |part3|counter_4bit:c3|Add0~3   ; |part3|counter_4bit:c3|Add0~3   ; out0             ;
+; |part3|counter_4bit:c3|Add0~4   ; |part3|counter_4bit:c3|Add0~4   ; out0             ;
+; |part3|counter_28bit:c2|Add0~3  ; |part3|counter_28bit:c2|Add0~3  ; out0             ;
+; |part3|counter_28bit:c2|Add0~4  ; |part3|counter_28bit:c2|Add0~4  ; out0             ;
+; |part3|counter_28bit:c2|Add0~5  ; |part3|counter_28bit:c2|Add0~5  ; out0             ;
+; |part3|counter_28bit:c2|Add0~6  ; |part3|counter_28bit:c2|Add0~6  ; out0             ;
+; |part3|counter_28bit:c2|Add0~7  ; |part3|counter_28bit:c2|Add0~7  ; out0             ;
+; |part3|counter_28bit:c2|Add0~8  ; |part3|counter_28bit:c2|Add0~8  ; out0             ;
+; |part3|counter_28bit:c2|Add0~9  ; |part3|counter_28bit:c2|Add0~9  ; out0             ;
+; |part3|counter_28bit:c2|Add0~10 ; |part3|counter_28bit:c2|Add0~10 ; out0             ;
+; |part3|counter_28bit:c2|Add0~11 ; |part3|counter_28bit:c2|Add0~11 ; out0             ;
+; |part3|counter_28bit:c2|Add0~12 ; |part3|counter_28bit:c2|Add0~12 ; out0             ;
+; |part3|counter_28bit:c2|Add0~13 ; |part3|counter_28bit:c2|Add0~13 ; out0             ;
+; |part3|counter_28bit:c2|Add0~14 ; |part3|counter_28bit:c2|Add0~14 ; out0             ;
+; |part3|counter_28bit:c2|Add0~15 ; |part3|counter_28bit:c2|Add0~15 ; out0             ;
+; |part3|counter_28bit:c2|Add0~16 ; |part3|counter_28bit:c2|Add0~16 ; out0             ;
+; |part3|counter_28bit:c2|Add0~17 ; |part3|counter_28bit:c2|Add0~17 ; out0             ;
+; |part3|counter_28bit:c2|Add0~18 ; |part3|counter_28bit:c2|Add0~18 ; out0             ;
+; |part3|counter_28bit:c2|Add0~19 ; |part3|counter_28bit:c2|Add0~19 ; out0             ;
+; |part3|counter_28bit:c2|Add0~20 ; |part3|counter_28bit:c2|Add0~20 ; out0             ;
+; |part3|counter_28bit:c2|Add0~21 ; |part3|counter_28bit:c2|Add0~21 ; out0             ;
+; |part3|counter_28bit:c2|Add0~22 ; |part3|counter_28bit:c2|Add0~22 ; out0             ;
+; |part3|counter_28bit:c2|Add0~23 ; |part3|counter_28bit:c2|Add0~23 ; out0             ;
+; |part3|counter_28bit:c2|Add0~24 ; |part3|counter_28bit:c2|Add0~24 ; out0             ;
+; |part3|counter_28bit:c2|Add0~25 ; |part3|counter_28bit:c2|Add0~25 ; out0             ;
+; |part3|counter_28bit:c2|Add0~26 ; |part3|counter_28bit:c2|Add0~26 ; out0             ;
+; |part3|counter_28bit:c2|Add0~27 ; |part3|counter_28bit:c2|Add0~27 ; out0             ;
+; |part3|counter_28bit:c2|Add0~28 ; |part3|counter_28bit:c2|Add0~28 ; out0             ;
+; |part3|counter_28bit:c2|Add0~29 ; |part3|counter_28bit:c2|Add0~29 ; out0             ;
+; |part3|counter_28bit:c2|Add0~30 ; |part3|counter_28bit:c2|Add0~30 ; out0             ;
+; |part3|counter_28bit:c2|Add0~31 ; |part3|counter_28bit:c2|Add0~31 ; out0             ;
+; |part3|counter_28bit:c2|Add0~32 ; |part3|counter_28bit:c2|Add0~32 ; out0             ;
+; |part3|counter_28bit:c2|Add0~33 ; |part3|counter_28bit:c2|Add0~33 ; out0             ;
+; |part3|counter_28bit:c2|Add0~34 ; |part3|counter_28bit:c2|Add0~34 ; out0             ;
+; |part3|counter_28bit:c2|Add0~35 ; |part3|counter_28bit:c2|Add0~35 ; out0             ;
+; |part3|counter_28bit:c2|Add0~36 ; |part3|counter_28bit:c2|Add0~36 ; out0             ;
+; |part3|counter_28bit:c2|Add0~37 ; |part3|counter_28bit:c2|Add0~37 ; out0             ;
+; |part3|counter_28bit:c2|Add0~38 ; |part3|counter_28bit:c2|Add0~38 ; out0             ;
+; |part3|counter_28bit:c2|Add0~39 ; |part3|counter_28bit:c2|Add0~39 ; out0             ;
+; |part3|counter_28bit:c2|Add0~40 ; |part3|counter_28bit:c2|Add0~40 ; out0             ;
+; |part3|counter_28bit:c2|Add0~41 ; |part3|counter_28bit:c2|Add0~41 ; out0             ;
+; |part3|counter_28bit:c2|Add0~42 ; |part3|counter_28bit:c2|Add0~42 ; out0             ;
+; |part3|counter_28bit:c2|Add0~43 ; |part3|counter_28bit:c2|Add0~43 ; out0             ;
+; |part3|counter_28bit:c2|Add0~44 ; |part3|counter_28bit:c2|Add0~44 ; out0             ;
+; |part3|counter_28bit:c2|Add0~45 ; |part3|counter_28bit:c2|Add0~45 ; out0             ;
+; |part3|counter_28bit:c2|Add0~46 ; |part3|counter_28bit:c2|Add0~46 ; out0             ;
+; |part3|counter_28bit:c2|Add0~47 ; |part3|counter_28bit:c2|Add0~47 ; out0             ;
+; |part3|counter_28bit:c2|Add0~48 ; |part3|counter_28bit:c2|Add0~48 ; out0             ;
+; |part3|counter_28bit:c2|Add0~49 ; |part3|counter_28bit:c2|Add0~49 ; out0             ;
+; |part3|counter_28bit:c2|Add0~50 ; |part3|counter_28bit:c2|Add0~50 ; out0             ;
+; |part3|counter_28bit:c2|Add0~51 ; |part3|counter_28bit:c2|Add0~51 ; out0             ;
+; |part3|counter_28bit:c2|Add0~52 ; |part3|counter_28bit:c2|Add0~52 ; out0             ;
+; |part3|counter_27bit:c1|Add0~3  ; |part3|counter_27bit:c1|Add0~3  ; out0             ;
+; |part3|counter_27bit:c1|Add0~4  ; |part3|counter_27bit:c1|Add0~4  ; out0             ;
+; |part3|counter_27bit:c1|Add0~5  ; |part3|counter_27bit:c1|Add0~5  ; out0             ;
+; |part3|counter_27bit:c1|Add0~6  ; |part3|counter_27bit:c1|Add0~6  ; out0             ;
+; |part3|counter_27bit:c1|Add0~7  ; |part3|counter_27bit:c1|Add0~7  ; out0             ;
+; |part3|counter_27bit:c1|Add0~8  ; |part3|counter_27bit:c1|Add0~8  ; out0             ;
+; |part3|counter_27bit:c1|Add0~9  ; |part3|counter_27bit:c1|Add0~9  ; out0             ;
+; |part3|counter_27bit:c1|Add0~10 ; |part3|counter_27bit:c1|Add0~10 ; out0             ;
+; |part3|counter_27bit:c1|Add0~11 ; |part3|counter_27bit:c1|Add0~11 ; out0             ;
+; |part3|counter_27bit:c1|Add0~12 ; |part3|counter_27bit:c1|Add0~12 ; out0             ;
+; |part3|counter_27bit:c1|Add0~13 ; |part3|counter_27bit:c1|Add0~13 ; out0             ;
+; |part3|counter_27bit:c1|Add0~14 ; |part3|counter_27bit:c1|Add0~14 ; out0             ;
+; |part3|counter_27bit:c1|Add0~15 ; |part3|counter_27bit:c1|Add0~15 ; out0             ;
+; |part3|counter_27bit:c1|Add0~16 ; |part3|counter_27bit:c1|Add0~16 ; out0             ;
+; |part3|counter_27bit:c1|Add0~17 ; |part3|counter_27bit:c1|Add0~17 ; out0             ;
+; |part3|counter_27bit:c1|Add0~18 ; |part3|counter_27bit:c1|Add0~18 ; out0             ;
+; |part3|counter_27bit:c1|Add0~19 ; |part3|counter_27bit:c1|Add0~19 ; out0             ;
+; |part3|counter_27bit:c1|Add0~20 ; |part3|counter_27bit:c1|Add0~20 ; out0             ;
+; |part3|counter_27bit:c1|Add0~21 ; |part3|counter_27bit:c1|Add0~21 ; out0             ;
+; |part3|counter_27bit:c1|Add0~22 ; |part3|counter_27bit:c1|Add0~22 ; out0             ;
+; |part3|counter_27bit:c1|Add0~23 ; |part3|counter_27bit:c1|Add0~23 ; out0             ;
+; |part3|counter_27bit:c1|Add0~24 ; |part3|counter_27bit:c1|Add0~24 ; out0             ;
+; |part3|counter_27bit:c1|Add0~25 ; |part3|counter_27bit:c1|Add0~25 ; out0             ;
+; |part3|counter_27bit:c1|Add0~26 ; |part3|counter_27bit:c1|Add0~26 ; out0             ;
+; |part3|counter_27bit:c1|Add0~27 ; |part3|counter_27bit:c1|Add0~27 ; out0             ;
+; |part3|counter_27bit:c1|Add0~28 ; |part3|counter_27bit:c1|Add0~28 ; out0             ;
+; |part3|counter_27bit:c1|Add0~29 ; |part3|counter_27bit:c1|Add0~29 ; out0             ;
+; |part3|counter_27bit:c1|Add0~30 ; |part3|counter_27bit:c1|Add0~30 ; out0             ;
+; |part3|counter_27bit:c1|Add0~31 ; |part3|counter_27bit:c1|Add0~31 ; out0             ;
+; |part3|counter_27bit:c1|Add0~32 ; |part3|counter_27bit:c1|Add0~32 ; out0             ;
+; |part3|counter_27bit:c1|Add0~33 ; |part3|counter_27bit:c1|Add0~33 ; out0             ;
+; |part3|counter_27bit:c1|Add0~34 ; |part3|counter_27bit:c1|Add0~34 ; out0             ;
+; |part3|counter_27bit:c1|Add0~35 ; |part3|counter_27bit:c1|Add0~35 ; out0             ;
+; |part3|counter_27bit:c1|Add0~36 ; |part3|counter_27bit:c1|Add0~36 ; out0             ;
+; |part3|counter_27bit:c1|Add0~37 ; |part3|counter_27bit:c1|Add0~37 ; out0             ;
+; |part3|counter_27bit:c1|Add0~38 ; |part3|counter_27bit:c1|Add0~38 ; out0             ;
+; |part3|counter_27bit:c1|Add0~39 ; |part3|counter_27bit:c1|Add0~39 ; out0             ;
+; |part3|counter_27bit:c1|Add0~40 ; |part3|counter_27bit:c1|Add0~40 ; out0             ;
+; |part3|counter_27bit:c1|Add0~41 ; |part3|counter_27bit:c1|Add0~41 ; out0             ;
+; |part3|counter_27bit:c1|Add0~42 ; |part3|counter_27bit:c1|Add0~42 ; out0             ;
+; |part3|counter_27bit:c1|Add0~43 ; |part3|counter_27bit:c1|Add0~43 ; out0             ;
+; |part3|counter_27bit:c1|Add0~44 ; |part3|counter_27bit:c1|Add0~44 ; out0             ;
+; |part3|counter_27bit:c1|Add0~45 ; |part3|counter_27bit:c1|Add0~45 ; out0             ;
+; |part3|counter_27bit:c1|Add0~46 ; |part3|counter_27bit:c1|Add0~46 ; out0             ;
+; |part3|counter_27bit:c1|Add0~47 ; |part3|counter_27bit:c1|Add0~47 ; out0             ;
+; |part3|counter_27bit:c1|Add0~48 ; |part3|counter_27bit:c1|Add0~48 ; out0             ;
+; |part3|counter_27bit:c1|Add0~49 ; |part3|counter_27bit:c1|Add0~49 ; out0             ;
+; |part3|counter_27bit:c1|Add0~50 ; |part3|counter_27bit:c1|Add0~50 ; out0             ;
+; |part3|counter_26bit:c0|Add0~3  ; |part3|counter_26bit:c0|Add0~3  ; out0             ;
+; |part3|counter_26bit:c0|Add0~4  ; |part3|counter_26bit:c0|Add0~4  ; out0             ;
+; |part3|counter_26bit:c0|Add0~5  ; |part3|counter_26bit:c0|Add0~5  ; out0             ;
+; |part3|counter_26bit:c0|Add0~6  ; |part3|counter_26bit:c0|Add0~6  ; out0             ;
+; |part3|counter_26bit:c0|Add0~7  ; |part3|counter_26bit:c0|Add0~7  ; out0             ;
+; |part3|counter_26bit:c0|Add0~8  ; |part3|counter_26bit:c0|Add0~8  ; out0             ;
+; |part3|counter_26bit:c0|Add0~9  ; |part3|counter_26bit:c0|Add0~9  ; out0             ;
+; |part3|counter_26bit:c0|Add0~10 ; |part3|counter_26bit:c0|Add0~10 ; out0             ;
+; |part3|counter_26bit:c0|Add0~11 ; |part3|counter_26bit:c0|Add0~11 ; out0             ;
+; |part3|counter_26bit:c0|Add0~12 ; |part3|counter_26bit:c0|Add0~12 ; out0             ;
+; |part3|counter_26bit:c0|Add0~13 ; |part3|counter_26bit:c0|Add0~13 ; out0             ;
+; |part3|counter_26bit:c0|Add0~14 ; |part3|counter_26bit:c0|Add0~14 ; out0             ;
+; |part3|counter_26bit:c0|Add0~15 ; |part3|counter_26bit:c0|Add0~15 ; out0             ;
+; |part3|counter_26bit:c0|Add0~16 ; |part3|counter_26bit:c0|Add0~16 ; out0             ;
+; |part3|counter_26bit:c0|Add0~17 ; |part3|counter_26bit:c0|Add0~17 ; out0             ;
+; |part3|counter_26bit:c0|Add0~18 ; |part3|counter_26bit:c0|Add0~18 ; out0             ;
+; |part3|counter_26bit:c0|Add0~19 ; |part3|counter_26bit:c0|Add0~19 ; out0             ;
+; |part3|counter_26bit:c0|Add0~20 ; |part3|counter_26bit:c0|Add0~20 ; out0             ;
+; |part3|counter_26bit:c0|Add0~21 ; |part3|counter_26bit:c0|Add0~21 ; out0             ;
+; |part3|counter_26bit:c0|Add0~22 ; |part3|counter_26bit:c0|Add0~22 ; out0             ;
+; |part3|counter_26bit:c0|Add0~23 ; |part3|counter_26bit:c0|Add0~23 ; out0             ;
+; |part3|counter_26bit:c0|Add0~24 ; |part3|counter_26bit:c0|Add0~24 ; out0             ;
+; |part3|counter_26bit:c0|Add0~25 ; |part3|counter_26bit:c0|Add0~25 ; out0             ;
+; |part3|counter_26bit:c0|Add0~26 ; |part3|counter_26bit:c0|Add0~26 ; out0             ;
+; |part3|counter_26bit:c0|Add0~27 ; |part3|counter_26bit:c0|Add0~27 ; out0             ;
+; |part3|counter_26bit:c0|Add0~28 ; |part3|counter_26bit:c0|Add0~28 ; out0             ;
+; |part3|counter_26bit:c0|Add0~29 ; |part3|counter_26bit:c0|Add0~29 ; out0             ;
+; |part3|counter_26bit:c0|Add0~30 ; |part3|counter_26bit:c0|Add0~30 ; out0             ;
+; |part3|counter_26bit:c0|Add0~31 ; |part3|counter_26bit:c0|Add0~31 ; out0             ;
+; |part3|counter_26bit:c0|Add0~32 ; |part3|counter_26bit:c0|Add0~32 ; out0             ;
+; |part3|counter_26bit:c0|Add0~33 ; |part3|counter_26bit:c0|Add0~33 ; out0             ;
+; |part3|counter_26bit:c0|Add0~34 ; |part3|counter_26bit:c0|Add0~34 ; out0             ;
+; |part3|counter_26bit:c0|Add0~35 ; |part3|counter_26bit:c0|Add0~35 ; out0             ;
+; |part3|counter_26bit:c0|Add0~36 ; |part3|counter_26bit:c0|Add0~36 ; out0             ;
+; |part3|counter_26bit:c0|Add0~37 ; |part3|counter_26bit:c0|Add0~37 ; out0             ;
+; |part3|counter_26bit:c0|Add0~38 ; |part3|counter_26bit:c0|Add0~38 ; out0             ;
+; |part3|counter_26bit:c0|Add0~39 ; |part3|counter_26bit:c0|Add0~39 ; out0             ;
+; |part3|counter_26bit:c0|Add0~40 ; |part3|counter_26bit:c0|Add0~40 ; out0             ;
+; |part3|counter_26bit:c0|Add0~41 ; |part3|counter_26bit:c0|Add0~41 ; out0             ;
+; |part3|counter_26bit:c0|Add0~42 ; |part3|counter_26bit:c0|Add0~42 ; out0             ;
+; |part3|counter_26bit:c0|Add0~43 ; |part3|counter_26bit:c0|Add0~43 ; out0             ;
+; |part3|counter_26bit:c0|Add0~44 ; |part3|counter_26bit:c0|Add0~44 ; out0             ;
+; |part3|counter_26bit:c0|Add0~45 ; |part3|counter_26bit:c0|Add0~45 ; out0             ;
+; |part3|counter_26bit:c0|Add0~46 ; |part3|counter_26bit:c0|Add0~46 ; out0             ;
+; |part3|counter_26bit:c0|Add0~47 ; |part3|counter_26bit:c0|Add0~47 ; out0             ;
+; |part3|counter_26bit:c0|Add0~48 ; |part3|counter_26bit:c0|Add0~48 ; out0             ;
++---------------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                             ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |part3|w~1                      ; |part3|w~1                      ; out0             ;
+; |part3|w~2                      ; |part3|w~2                      ; out0             ;
+; |part3|w~3                      ; |part3|w~3                      ; out0             ;
+; |part3|w~4                      ; |part3|w~4                      ; out0             ;
+; |part3|w~5                      ; |part3|w~5                      ; out0             ;
+; |part3|w~6                      ; |part3|w~6                      ; out0             ;
+; |part3|w~7                      ; |part3|w~7                      ; out0             ;
+; |part3|w~8                      ; |part3|w~8                      ; out0             ;
+; |part3|w~9                      ; |part3|w~9                      ; out0             ;
+; |part3|w~10                     ; |part3|w~10                     ; out0             ;
+; |part3|w~11                     ; |part3|w~11                     ; out0             ;
+; |part3|w~12                     ; |part3|w~12                     ; out0             ;
+; |part3|w~13                     ; |part3|w~13                     ; out0             ;
+; |part3|w~14                     ; |part3|w~14                     ; out0             ;
+; |part3|w~15                     ; |part3|w~15                     ; out0             ;
+; |part3|w~16                     ; |part3|w~16                     ; out0             ;
+; |part3|w~17                     ; |part3|w~17                     ; out0             ;
+; |part3|w~18                     ; |part3|w~18                     ; out0             ;
+; |part3|w~19                     ; |part3|w~19                     ; out0             ;
+; |part3|w~20                     ; |part3|w~20                     ; out0             ;
+; |part3|w~21                     ; |part3|w~21                     ; out0             ;
+; |part3|w~22                     ; |part3|w~22                     ; out0             ;
+; |part3|w~23                     ; |part3|w~23                     ; out0             ;
+; |part3|w~24                     ; |part3|w~24                     ; out0             ;
+; |part3|w~25                     ; |part3|w~25                     ; out0             ;
+; |part3|w[1]                     ; |part3|w[1]                     ; out0             ;
+; |part3|w~27                     ; |part3|w~27                     ; out0             ;
+; |part3|w~28                     ; |part3|w~28                     ; out0             ;
+; |part3|w~29                     ; |part3|w~29                     ; out0             ;
+; |part3|w~30                     ; |part3|w~30                     ; out0             ;
+; |part3|w~31                     ; |part3|w~31                     ; out0             ;
+; |part3|w~32                     ; |part3|w~32                     ; out0             ;
+; |part3|w~33                     ; |part3|w~33                     ; out0             ;
+; |part3|w~34                     ; |part3|w~34                     ; out0             ;
+; |part3|w~35                     ; |part3|w~35                     ; out0             ;
+; |part3|w~36                     ; |part3|w~36                     ; out0             ;
+; |part3|w~37                     ; |part3|w~37                     ; out0             ;
+; |part3|w~38                     ; |part3|w~38                     ; out0             ;
+; |part3|w~39                     ; |part3|w~39                     ; out0             ;
+; |part3|w~40                     ; |part3|w~40                     ; out0             ;
+; |part3|w~41                     ; |part3|w~41                     ; out0             ;
+; |part3|w~42                     ; |part3|w~42                     ; out0             ;
+; |part3|w~43                     ; |part3|w~43                     ; out0             ;
+; |part3|w~44                     ; |part3|w~44                     ; out0             ;
+; |part3|w~45                     ; |part3|w~45                     ; out0             ;
+; |part3|w~46                     ; |part3|w~46                     ; out0             ;
+; |part3|w~47                     ; |part3|w~47                     ; out0             ;
+; |part3|w~48                     ; |part3|w~48                     ; out0             ;
+; |part3|w~49                     ; |part3|w~49                     ; out0             ;
+; |part3|w~50                     ; |part3|w~50                     ; out0             ;
+; |part3|w~51                     ; |part3|w~51                     ; out0             ;
+; |part3|w~52                     ; |part3|w~52                     ; out0             ;
+; |part3|w[2]                     ; |part3|w[2]                     ; out0             ;
+; |part3|w~54                     ; |part3|w~54                     ; out0             ;
+; |part3|w~55                     ; |part3|w~55                     ; out0             ;
+; |part3|w~56                     ; |part3|w~56                     ; out0             ;
+; |part3|w~57                     ; |part3|w~57                     ; out0             ;
+; |part3|w~58                     ; |part3|w~58                     ; out0             ;
+; |part3|w~59                     ; |part3|w~59                     ; out0             ;
+; |part3|w~60                     ; |part3|w~60                     ; out0             ;
+; |part3|w~61                     ; |part3|w~61                     ; out0             ;
+; |part3|w~62                     ; |part3|w~62                     ; out0             ;
+; |part3|w~63                     ; |part3|w~63                     ; out0             ;
+; |part3|w~64                     ; |part3|w~64                     ; out0             ;
+; |part3|w~65                     ; |part3|w~65                     ; out0             ;
+; |part3|w~66                     ; |part3|w~66                     ; out0             ;
+; |part3|w~67                     ; |part3|w~67                     ; out0             ;
+; |part3|w~68                     ; |part3|w~68                     ; out0             ;
+; |part3|w~69                     ; |part3|w~69                     ; out0             ;
+; |part3|w~70                     ; |part3|w~70                     ; out0             ;
+; |part3|w~71                     ; |part3|w~71                     ; out0             ;
+; |part3|w~72                     ; |part3|w~72                     ; out0             ;
+; |part3|w~73                     ; |part3|w~73                     ; out0             ;
+; |part3|w~74                     ; |part3|w~74                     ; out0             ;
+; |part3|w~75                     ; |part3|w~75                     ; out0             ;
+; |part3|w~76                     ; |part3|w~76                     ; out0             ;
+; |part3|w~77                     ; |part3|w~77                     ; out0             ;
+; |part3|w~78                     ; |part3|w~78                     ; out0             ;
+; |part3|w~79                     ; |part3|w~79                     ; out0             ;
+; |part3|w~80                     ; |part3|w~80                     ; out0             ;
+; |part3|w[3]                     ; |part3|w[3]                     ; out0             ;
+; |part3|w~81                     ; |part3|w~81                     ; out0             ;
+; |part3|w~82                     ; |part3|w~82                     ; out0             ;
+; |part3|SW[2]                    ; |part3|SW[2]                    ; out              ;
+; |part3|SW[3]                    ; |part3|SW[3]                    ; out              ;
+; |part3|HEX0[1]                  ; |part3|HEX0[1]                  ; pin_out          ;
+; |part3|HEX0[2]                  ; |part3|HEX0[2]                  ; pin_out          ;
+; |part3|HEX0[5]                  ; |part3|HEX0[5]                  ; pin_out          ;
+; |part3|hexseg:h0|WideOr1        ; |part3|hexseg:h0|WideOr1        ; out0             ;
+; |part3|hexseg:h0|WideOr4        ; |part3|hexseg:h0|WideOr4        ; out0             ;
+; |part3|hexseg:h0|WideOr5        ; |part3|hexseg:h0|WideOr5        ; out0             ;
+; |part3|counter_4bit:c3|Q[3]     ; |part3|counter_4bit:c3|Q[3]     ; regout           ;
+; |part3|counter_4bit:c3|Q[2]     ; |part3|counter_4bit:c3|Q[2]     ; regout           ;
+; |part3|counter_4bit:c3|Q[1]     ; |part3|counter_4bit:c3|Q[1]     ; regout           ;
+; |part3|counter_28bit:c2|Q[27]   ; |part3|counter_28bit:c2|Q[27]   ; regout           ;
+; |part3|counter_28bit:c2|Q[26]   ; |part3|counter_28bit:c2|Q[26]   ; regout           ;
+; |part3|counter_28bit:c2|Q[25]   ; |part3|counter_28bit:c2|Q[25]   ; regout           ;
+; |part3|counter_28bit:c2|Q[24]   ; |part3|counter_28bit:c2|Q[24]   ; regout           ;
+; |part3|counter_28bit:c2|Q[23]   ; |part3|counter_28bit:c2|Q[23]   ; regout           ;
+; |part3|counter_28bit:c2|Q[22]   ; |part3|counter_28bit:c2|Q[22]   ; regout           ;
+; |part3|counter_28bit:c2|Q[21]   ; |part3|counter_28bit:c2|Q[21]   ; regout           ;
+; |part3|counter_28bit:c2|Q[20]   ; |part3|counter_28bit:c2|Q[20]   ; regout           ;
+; |part3|counter_28bit:c2|Q[19]   ; |part3|counter_28bit:c2|Q[19]   ; regout           ;
+; |part3|counter_28bit:c2|Q[18]   ; |part3|counter_28bit:c2|Q[18]   ; regout           ;
+; |part3|counter_28bit:c2|Q[17]   ; |part3|counter_28bit:c2|Q[17]   ; regout           ;
+; |part3|counter_28bit:c2|Q[16]   ; |part3|counter_28bit:c2|Q[16]   ; regout           ;
+; |part3|counter_28bit:c2|Q[15]   ; |part3|counter_28bit:c2|Q[15]   ; regout           ;
+; |part3|counter_28bit:c2|Q[14]   ; |part3|counter_28bit:c2|Q[14]   ; regout           ;
+; |part3|counter_28bit:c2|Q[13]   ; |part3|counter_28bit:c2|Q[13]   ; regout           ;
+; |part3|counter_28bit:c2|Q[12]   ; |part3|counter_28bit:c2|Q[12]   ; regout           ;
+; |part3|counter_28bit:c2|Q[11]   ; |part3|counter_28bit:c2|Q[11]   ; regout           ;
+; |part3|counter_28bit:c2|Q[10]   ; |part3|counter_28bit:c2|Q[10]   ; regout           ;
+; |part3|counter_28bit:c2|Q[9]    ; |part3|counter_28bit:c2|Q[9]    ; regout           ;
+; |part3|counter_28bit:c2|Q[8]    ; |part3|counter_28bit:c2|Q[8]    ; regout           ;
+; |part3|counter_28bit:c2|Q[7]    ; |part3|counter_28bit:c2|Q[7]    ; regout           ;
+; |part3|counter_28bit:c2|Q[6]    ; |part3|counter_28bit:c2|Q[6]    ; regout           ;
+; |part3|counter_28bit:c2|Q[5]    ; |part3|counter_28bit:c2|Q[5]    ; regout           ;
+; |part3|counter_28bit:c2|Q[4]    ; |part3|counter_28bit:c2|Q[4]    ; regout           ;
+; |part3|counter_28bit:c2|Q[3]    ; |part3|counter_28bit:c2|Q[3]    ; regout           ;
+; |part3|counter_28bit:c2|Q[2]    ; |part3|counter_28bit:c2|Q[2]    ; regout           ;
+; |part3|counter_27bit:c1|Q[26]   ; |part3|counter_27bit:c1|Q[26]   ; regout           ;
+; |part3|counter_27bit:c1|Q[25]   ; |part3|counter_27bit:c1|Q[25]   ; regout           ;
+; |part3|counter_27bit:c1|Q[24]   ; |part3|counter_27bit:c1|Q[24]   ; regout           ;
+; |part3|counter_27bit:c1|Q[23]   ; |part3|counter_27bit:c1|Q[23]   ; regout           ;
+; |part3|counter_27bit:c1|Q[22]   ; |part3|counter_27bit:c1|Q[22]   ; regout           ;
+; |part3|counter_27bit:c1|Q[21]   ; |part3|counter_27bit:c1|Q[21]   ; regout           ;
+; |part3|counter_27bit:c1|Q[20]   ; |part3|counter_27bit:c1|Q[20]   ; regout           ;
+; |part3|counter_27bit:c1|Q[19]   ; |part3|counter_27bit:c1|Q[19]   ; regout           ;
+; |part3|counter_27bit:c1|Q[18]   ; |part3|counter_27bit:c1|Q[18]   ; regout           ;
+; |part3|counter_27bit:c1|Q[17]   ; |part3|counter_27bit:c1|Q[17]   ; regout           ;
+; |part3|counter_27bit:c1|Q[16]   ; |part3|counter_27bit:c1|Q[16]   ; regout           ;
+; |part3|counter_27bit:c1|Q[15]   ; |part3|counter_27bit:c1|Q[15]   ; regout           ;
+; |part3|counter_27bit:c1|Q[14]   ; |part3|counter_27bit:c1|Q[14]   ; regout           ;
+; |part3|counter_27bit:c1|Q[13]   ; |part3|counter_27bit:c1|Q[13]   ; regout           ;
+; |part3|counter_27bit:c1|Q[12]   ; |part3|counter_27bit:c1|Q[12]   ; regout           ;
+; |part3|counter_27bit:c1|Q[11]   ; |part3|counter_27bit:c1|Q[11]   ; regout           ;
+; |part3|counter_27bit:c1|Q[10]   ; |part3|counter_27bit:c1|Q[10]   ; regout           ;
+; |part3|counter_27bit:c1|Q[9]    ; |part3|counter_27bit:c1|Q[9]    ; regout           ;
+; |part3|counter_27bit:c1|Q[8]    ; |part3|counter_27bit:c1|Q[8]    ; regout           ;
+; |part3|counter_27bit:c1|Q[7]    ; |part3|counter_27bit:c1|Q[7]    ; regout           ;
+; |part3|counter_27bit:c1|Q[6]    ; |part3|counter_27bit:c1|Q[6]    ; regout           ;
+; |part3|counter_27bit:c1|Q[5]    ; |part3|counter_27bit:c1|Q[5]    ; regout           ;
+; |part3|counter_27bit:c1|Q[4]    ; |part3|counter_27bit:c1|Q[4]    ; regout           ;
+; |part3|counter_27bit:c1|Q[3]    ; |part3|counter_27bit:c1|Q[3]    ; regout           ;
+; |part3|counter_27bit:c1|Q[2]    ; |part3|counter_27bit:c1|Q[2]    ; regout           ;
+; |part3|counter_26bit:c0|Q[25]   ; |part3|counter_26bit:c0|Q[25]   ; regout           ;
+; |part3|counter_26bit:c0|Q[24]   ; |part3|counter_26bit:c0|Q[24]   ; regout           ;
+; |part3|counter_26bit:c0|Q[23]   ; |part3|counter_26bit:c0|Q[23]   ; regout           ;
+; |part3|counter_26bit:c0|Q[22]   ; |part3|counter_26bit:c0|Q[22]   ; regout           ;
+; |part3|counter_26bit:c0|Q[21]   ; |part3|counter_26bit:c0|Q[21]   ; regout           ;
+; |part3|counter_26bit:c0|Q[20]   ; |part3|counter_26bit:c0|Q[20]   ; regout           ;
+; |part3|counter_26bit:c0|Q[19]   ; |part3|counter_26bit:c0|Q[19]   ; regout           ;
+; |part3|counter_26bit:c0|Q[18]   ; |part3|counter_26bit:c0|Q[18]   ; regout           ;
+; |part3|counter_26bit:c0|Q[17]   ; |part3|counter_26bit:c0|Q[17]   ; regout           ;
+; |part3|counter_26bit:c0|Q[16]   ; |part3|counter_26bit:c0|Q[16]   ; regout           ;
+; |part3|counter_26bit:c0|Q[15]   ; |part3|counter_26bit:c0|Q[15]   ; regout           ;
+; |part3|counter_26bit:c0|Q[14]   ; |part3|counter_26bit:c0|Q[14]   ; regout           ;
+; |part3|counter_26bit:c0|Q[13]   ; |part3|counter_26bit:c0|Q[13]   ; regout           ;
+; |part3|counter_26bit:c0|Q[12]   ; |part3|counter_26bit:c0|Q[12]   ; regout           ;
+; |part3|counter_26bit:c0|Q[11]   ; |part3|counter_26bit:c0|Q[11]   ; regout           ;
+; |part3|counter_26bit:c0|Q[10]   ; |part3|counter_26bit:c0|Q[10]   ; regout           ;
+; |part3|counter_26bit:c0|Q[9]    ; |part3|counter_26bit:c0|Q[9]    ; regout           ;
+; |part3|counter_26bit:c0|Q[8]    ; |part3|counter_26bit:c0|Q[8]    ; regout           ;
+; |part3|counter_26bit:c0|Q[7]    ; |part3|counter_26bit:c0|Q[7]    ; regout           ;
+; |part3|counter_26bit:c0|Q[6]    ; |part3|counter_26bit:c0|Q[6]    ; regout           ;
+; |part3|counter_26bit:c0|Q[5]    ; |part3|counter_26bit:c0|Q[5]    ; regout           ;
+; |part3|counter_26bit:c0|Q[4]    ; |part3|counter_26bit:c0|Q[4]    ; regout           ;
+; |part3|counter_26bit:c0|Q[3]    ; |part3|counter_26bit:c0|Q[3]    ; regout           ;
+; |part3|counter_26bit:c0|Q[2]    ; |part3|counter_26bit:c0|Q[2]    ; regout           ;
+; |part3|hexseg:h0|Decoder0~2     ; |part3|hexseg:h0|Decoder0~2     ; out              ;
+; |part3|hexseg:h0|Decoder0~3     ; |part3|hexseg:h0|Decoder0~3     ; out              ;
+; |part3|hexseg:h0|Decoder0~4     ; |part3|hexseg:h0|Decoder0~4     ; out              ;
+; |part3|hexseg:h0|Decoder0~5     ; |part3|hexseg:h0|Decoder0~5     ; out              ;
+; |part3|hexseg:h0|Decoder0~6     ; |part3|hexseg:h0|Decoder0~6     ; out              ;
+; |part3|hexseg:h0|Decoder0~7     ; |part3|hexseg:h0|Decoder0~7     ; out              ;
+; |part3|hexseg:h0|Decoder0~8     ; |part3|hexseg:h0|Decoder0~8     ; out              ;
+; |part3|hexseg:h0|Decoder0~9     ; |part3|hexseg:h0|Decoder0~9     ; out              ;
+; |part3|hexseg:h0|Decoder0~10    ; |part3|hexseg:h0|Decoder0~10    ; out              ;
+; |part3|hexseg:h0|Decoder0~11    ; |part3|hexseg:h0|Decoder0~11    ; out              ;
+; |part3|hexseg:h0|Decoder0~12    ; |part3|hexseg:h0|Decoder0~12    ; out              ;
+; |part3|hexseg:h0|Decoder0~13    ; |part3|hexseg:h0|Decoder0~13    ; out              ;
+; |part3|hexseg:h0|Decoder0~14    ; |part3|hexseg:h0|Decoder0~14    ; out              ;
+; |part3|counter_4bit:c3|Add0~0   ; |part3|counter_4bit:c3|Add0~0   ; out0             ;
+; |part3|counter_4bit:c3|Add0~1   ; |part3|counter_4bit:c3|Add0~1   ; out0             ;
+; |part3|counter_4bit:c3|Add0~2   ; |part3|counter_4bit:c3|Add0~2   ; out0             ;
+; |part3|counter_4bit:c3|Add0~3   ; |part3|counter_4bit:c3|Add0~3   ; out0             ;
+; |part3|counter_4bit:c3|Add0~4   ; |part3|counter_4bit:c3|Add0~4   ; out0             ;
+; |part3|counter_28bit:c2|Add0~2  ; |part3|counter_28bit:c2|Add0~2  ; out0             ;
+; |part3|counter_28bit:c2|Add0~3  ; |part3|counter_28bit:c2|Add0~3  ; out0             ;
+; |part3|counter_28bit:c2|Add0~4  ; |part3|counter_28bit:c2|Add0~4  ; out0             ;
+; |part3|counter_28bit:c2|Add0~5  ; |part3|counter_28bit:c2|Add0~5  ; out0             ;
+; |part3|counter_28bit:c2|Add0~6  ; |part3|counter_28bit:c2|Add0~6  ; out0             ;
+; |part3|counter_28bit:c2|Add0~7  ; |part3|counter_28bit:c2|Add0~7  ; out0             ;
+; |part3|counter_28bit:c2|Add0~8  ; |part3|counter_28bit:c2|Add0~8  ; out0             ;
+; |part3|counter_28bit:c2|Add0~9  ; |part3|counter_28bit:c2|Add0~9  ; out0             ;
+; |part3|counter_28bit:c2|Add0~10 ; |part3|counter_28bit:c2|Add0~10 ; out0             ;
+; |part3|counter_28bit:c2|Add0~11 ; |part3|counter_28bit:c2|Add0~11 ; out0             ;
+; |part3|counter_28bit:c2|Add0~12 ; |part3|counter_28bit:c2|Add0~12 ; out0             ;
+; |part3|counter_28bit:c2|Add0~13 ; |part3|counter_28bit:c2|Add0~13 ; out0             ;
+; |part3|counter_28bit:c2|Add0~14 ; |part3|counter_28bit:c2|Add0~14 ; out0             ;
+; |part3|counter_28bit:c2|Add0~15 ; |part3|counter_28bit:c2|Add0~15 ; out0             ;
+; |part3|counter_28bit:c2|Add0~16 ; |part3|counter_28bit:c2|Add0~16 ; out0             ;
+; |part3|counter_28bit:c2|Add0~17 ; |part3|counter_28bit:c2|Add0~17 ; out0             ;
+; |part3|counter_28bit:c2|Add0~18 ; |part3|counter_28bit:c2|Add0~18 ; out0             ;
+; |part3|counter_28bit:c2|Add0~19 ; |part3|counter_28bit:c2|Add0~19 ; out0             ;
+; |part3|counter_28bit:c2|Add0~20 ; |part3|counter_28bit:c2|Add0~20 ; out0             ;
+; |part3|counter_28bit:c2|Add0~21 ; |part3|counter_28bit:c2|Add0~21 ; out0             ;
+; |part3|counter_28bit:c2|Add0~22 ; |part3|counter_28bit:c2|Add0~22 ; out0             ;
+; |part3|counter_28bit:c2|Add0~23 ; |part3|counter_28bit:c2|Add0~23 ; out0             ;
+; |part3|counter_28bit:c2|Add0~24 ; |part3|counter_28bit:c2|Add0~24 ; out0             ;
+; |part3|counter_28bit:c2|Add0~25 ; |part3|counter_28bit:c2|Add0~25 ; out0             ;
+; |part3|counter_28bit:c2|Add0~26 ; |part3|counter_28bit:c2|Add0~26 ; out0             ;
+; |part3|counter_28bit:c2|Add0~27 ; |part3|counter_28bit:c2|Add0~27 ; out0             ;
+; |part3|counter_28bit:c2|Add0~28 ; |part3|counter_28bit:c2|Add0~28 ; out0             ;
+; |part3|counter_28bit:c2|Add0~29 ; |part3|counter_28bit:c2|Add0~29 ; out0             ;
+; |part3|counter_28bit:c2|Add0~30 ; |part3|counter_28bit:c2|Add0~30 ; out0             ;
+; |part3|counter_28bit:c2|Add0~31 ; |part3|counter_28bit:c2|Add0~31 ; out0             ;
+; |part3|counter_28bit:c2|Add0~32 ; |part3|counter_28bit:c2|Add0~32 ; out0             ;
+; |part3|counter_28bit:c2|Add0~33 ; |part3|counter_28bit:c2|Add0~33 ; out0             ;
+; |part3|counter_28bit:c2|Add0~34 ; |part3|counter_28bit:c2|Add0~34 ; out0             ;
+; |part3|counter_28bit:c2|Add0~35 ; |part3|counter_28bit:c2|Add0~35 ; out0             ;
+; |part3|counter_28bit:c2|Add0~36 ; |part3|counter_28bit:c2|Add0~36 ; out0             ;
+; |part3|counter_28bit:c2|Add0~37 ; |part3|counter_28bit:c2|Add0~37 ; out0             ;
+; |part3|counter_28bit:c2|Add0~38 ; |part3|counter_28bit:c2|Add0~38 ; out0             ;
+; |part3|counter_28bit:c2|Add0~39 ; |part3|counter_28bit:c2|Add0~39 ; out0             ;
+; |part3|counter_28bit:c2|Add0~40 ; |part3|counter_28bit:c2|Add0~40 ; out0             ;
+; |part3|counter_28bit:c2|Add0~41 ; |part3|counter_28bit:c2|Add0~41 ; out0             ;
+; |part3|counter_28bit:c2|Add0~42 ; |part3|counter_28bit:c2|Add0~42 ; out0             ;
+; |part3|counter_28bit:c2|Add0~43 ; |part3|counter_28bit:c2|Add0~43 ; out0             ;
+; |part3|counter_28bit:c2|Add0~44 ; |part3|counter_28bit:c2|Add0~44 ; out0             ;
+; |part3|counter_28bit:c2|Add0~45 ; |part3|counter_28bit:c2|Add0~45 ; out0             ;
+; |part3|counter_28bit:c2|Add0~46 ; |part3|counter_28bit:c2|Add0~46 ; out0             ;
+; |part3|counter_28bit:c2|Add0~47 ; |part3|counter_28bit:c2|Add0~47 ; out0             ;
+; |part3|counter_28bit:c2|Add0~48 ; |part3|counter_28bit:c2|Add0~48 ; out0             ;
+; |part3|counter_28bit:c2|Add0~49 ; |part3|counter_28bit:c2|Add0~49 ; out0             ;
+; |part3|counter_28bit:c2|Add0~50 ; |part3|counter_28bit:c2|Add0~50 ; out0             ;
+; |part3|counter_28bit:c2|Add0~51 ; |part3|counter_28bit:c2|Add0~51 ; out0             ;
+; |part3|counter_28bit:c2|Add0~52 ; |part3|counter_28bit:c2|Add0~52 ; out0             ;
+; |part3|counter_27bit:c1|Add0~2  ; |part3|counter_27bit:c1|Add0~2  ; out0             ;
+; |part3|counter_27bit:c1|Add0~3  ; |part3|counter_27bit:c1|Add0~3  ; out0             ;
+; |part3|counter_27bit:c1|Add0~4  ; |part3|counter_27bit:c1|Add0~4  ; out0             ;
+; |part3|counter_27bit:c1|Add0~5  ; |part3|counter_27bit:c1|Add0~5  ; out0             ;
+; |part3|counter_27bit:c1|Add0~6  ; |part3|counter_27bit:c1|Add0~6  ; out0             ;
+; |part3|counter_27bit:c1|Add0~7  ; |part3|counter_27bit:c1|Add0~7  ; out0             ;
+; |part3|counter_27bit:c1|Add0~8  ; |part3|counter_27bit:c1|Add0~8  ; out0             ;
+; |part3|counter_27bit:c1|Add0~9  ; |part3|counter_27bit:c1|Add0~9  ; out0             ;
+; |part3|counter_27bit:c1|Add0~10 ; |part3|counter_27bit:c1|Add0~10 ; out0             ;
+; |part3|counter_27bit:c1|Add0~11 ; |part3|counter_27bit:c1|Add0~11 ; out0             ;
+; |part3|counter_27bit:c1|Add0~12 ; |part3|counter_27bit:c1|Add0~12 ; out0             ;
+; |part3|counter_27bit:c1|Add0~13 ; |part3|counter_27bit:c1|Add0~13 ; out0             ;
+; |part3|counter_27bit:c1|Add0~14 ; |part3|counter_27bit:c1|Add0~14 ; out0             ;
+; |part3|counter_27bit:c1|Add0~15 ; |part3|counter_27bit:c1|Add0~15 ; out0             ;
+; |part3|counter_27bit:c1|Add0~16 ; |part3|counter_27bit:c1|Add0~16 ; out0             ;
+; |part3|counter_27bit:c1|Add0~17 ; |part3|counter_27bit:c1|Add0~17 ; out0             ;
+; |part3|counter_27bit:c1|Add0~18 ; |part3|counter_27bit:c1|Add0~18 ; out0             ;
+; |part3|counter_27bit:c1|Add0~19 ; |part3|counter_27bit:c1|Add0~19 ; out0             ;
+; |part3|counter_27bit:c1|Add0~20 ; |part3|counter_27bit:c1|Add0~20 ; out0             ;
+; |part3|counter_27bit:c1|Add0~21 ; |part3|counter_27bit:c1|Add0~21 ; out0             ;
+; |part3|counter_27bit:c1|Add0~22 ; |part3|counter_27bit:c1|Add0~22 ; out0             ;
+; |part3|counter_27bit:c1|Add0~23 ; |part3|counter_27bit:c1|Add0~23 ; out0             ;
+; |part3|counter_27bit:c1|Add0~24 ; |part3|counter_27bit:c1|Add0~24 ; out0             ;
+; |part3|counter_27bit:c1|Add0~25 ; |part3|counter_27bit:c1|Add0~25 ; out0             ;
+; |part3|counter_27bit:c1|Add0~26 ; |part3|counter_27bit:c1|Add0~26 ; out0             ;
+; |part3|counter_27bit:c1|Add0~27 ; |part3|counter_27bit:c1|Add0~27 ; out0             ;
+; |part3|counter_27bit:c1|Add0~28 ; |part3|counter_27bit:c1|Add0~28 ; out0             ;
+; |part3|counter_27bit:c1|Add0~29 ; |part3|counter_27bit:c1|Add0~29 ; out0             ;
+; |part3|counter_27bit:c1|Add0~30 ; |part3|counter_27bit:c1|Add0~30 ; out0             ;
+; |part3|counter_27bit:c1|Add0~31 ; |part3|counter_27bit:c1|Add0~31 ; out0             ;
+; |part3|counter_27bit:c1|Add0~32 ; |part3|counter_27bit:c1|Add0~32 ; out0             ;
+; |part3|counter_27bit:c1|Add0~33 ; |part3|counter_27bit:c1|Add0~33 ; out0             ;
+; |part3|counter_27bit:c1|Add0~34 ; |part3|counter_27bit:c1|Add0~34 ; out0             ;
+; |part3|counter_27bit:c1|Add0~35 ; |part3|counter_27bit:c1|Add0~35 ; out0             ;
+; |part3|counter_27bit:c1|Add0~36 ; |part3|counter_27bit:c1|Add0~36 ; out0             ;
+; |part3|counter_27bit:c1|Add0~37 ; |part3|counter_27bit:c1|Add0~37 ; out0             ;
+; |part3|counter_27bit:c1|Add0~38 ; |part3|counter_27bit:c1|Add0~38 ; out0             ;
+; |part3|counter_27bit:c1|Add0~39 ; |part3|counter_27bit:c1|Add0~39 ; out0             ;
+; |part3|counter_27bit:c1|Add0~40 ; |part3|counter_27bit:c1|Add0~40 ; out0             ;
+; |part3|counter_27bit:c1|Add0~41 ; |part3|counter_27bit:c1|Add0~41 ; out0             ;
+; |part3|counter_27bit:c1|Add0~42 ; |part3|counter_27bit:c1|Add0~42 ; out0             ;
+; |part3|counter_27bit:c1|Add0~43 ; |part3|counter_27bit:c1|Add0~43 ; out0             ;
+; |part3|counter_27bit:c1|Add0~44 ; |part3|counter_27bit:c1|Add0~44 ; out0             ;
+; |part3|counter_27bit:c1|Add0~45 ; |part3|counter_27bit:c1|Add0~45 ; out0             ;
+; |part3|counter_27bit:c1|Add0~46 ; |part3|counter_27bit:c1|Add0~46 ; out0             ;
+; |part3|counter_27bit:c1|Add0~47 ; |part3|counter_27bit:c1|Add0~47 ; out0             ;
+; |part3|counter_27bit:c1|Add0~48 ; |part3|counter_27bit:c1|Add0~48 ; out0             ;
+; |part3|counter_27bit:c1|Add0~49 ; |part3|counter_27bit:c1|Add0~49 ; out0             ;
+; |part3|counter_27bit:c1|Add0~50 ; |part3|counter_27bit:c1|Add0~50 ; out0             ;
+; |part3|counter_26bit:c0|Add0~2  ; |part3|counter_26bit:c0|Add0~2  ; out0             ;
+; |part3|counter_26bit:c0|Add0~3  ; |part3|counter_26bit:c0|Add0~3  ; out0             ;
+; |part3|counter_26bit:c0|Add0~4  ; |part3|counter_26bit:c0|Add0~4  ; out0             ;
+; |part3|counter_26bit:c0|Add0~5  ; |part3|counter_26bit:c0|Add0~5  ; out0             ;
+; |part3|counter_26bit:c0|Add0~6  ; |part3|counter_26bit:c0|Add0~6  ; out0             ;
+; |part3|counter_26bit:c0|Add0~7  ; |part3|counter_26bit:c0|Add0~7  ; out0             ;
+; |part3|counter_26bit:c0|Add0~8  ; |part3|counter_26bit:c0|Add0~8  ; out0             ;
+; |part3|counter_26bit:c0|Add0~9  ; |part3|counter_26bit:c0|Add0~9  ; out0             ;
+; |part3|counter_26bit:c0|Add0~10 ; |part3|counter_26bit:c0|Add0~10 ; out0             ;
+; |part3|counter_26bit:c0|Add0~11 ; |part3|counter_26bit:c0|Add0~11 ; out0             ;
+; |part3|counter_26bit:c0|Add0~12 ; |part3|counter_26bit:c0|Add0~12 ; out0             ;
+; |part3|counter_26bit:c0|Add0~13 ; |part3|counter_26bit:c0|Add0~13 ; out0             ;
+; |part3|counter_26bit:c0|Add0~14 ; |part3|counter_26bit:c0|Add0~14 ; out0             ;
+; |part3|counter_26bit:c0|Add0~15 ; |part3|counter_26bit:c0|Add0~15 ; out0             ;
+; |part3|counter_26bit:c0|Add0~16 ; |part3|counter_26bit:c0|Add0~16 ; out0             ;
+; |part3|counter_26bit:c0|Add0~17 ; |part3|counter_26bit:c0|Add0~17 ; out0             ;
+; |part3|counter_26bit:c0|Add0~18 ; |part3|counter_26bit:c0|Add0~18 ; out0             ;
+; |part3|counter_26bit:c0|Add0~19 ; |part3|counter_26bit:c0|Add0~19 ; out0             ;
+; |part3|counter_26bit:c0|Add0~20 ; |part3|counter_26bit:c0|Add0~20 ; out0             ;
+; |part3|counter_26bit:c0|Add0~21 ; |part3|counter_26bit:c0|Add0~21 ; out0             ;
+; |part3|counter_26bit:c0|Add0~22 ; |part3|counter_26bit:c0|Add0~22 ; out0             ;
+; |part3|counter_26bit:c0|Add0~23 ; |part3|counter_26bit:c0|Add0~23 ; out0             ;
+; |part3|counter_26bit:c0|Add0~24 ; |part3|counter_26bit:c0|Add0~24 ; out0             ;
+; |part3|counter_26bit:c0|Add0~25 ; |part3|counter_26bit:c0|Add0~25 ; out0             ;
+; |part3|counter_26bit:c0|Add0~26 ; |part3|counter_26bit:c0|Add0~26 ; out0             ;
+; |part3|counter_26bit:c0|Add0~27 ; |part3|counter_26bit:c0|Add0~27 ; out0             ;
+; |part3|counter_26bit:c0|Add0~28 ; |part3|counter_26bit:c0|Add0~28 ; out0             ;
+; |part3|counter_26bit:c0|Add0~29 ; |part3|counter_26bit:c0|Add0~29 ; out0             ;
+; |part3|counter_26bit:c0|Add0~30 ; |part3|counter_26bit:c0|Add0~30 ; out0             ;
+; |part3|counter_26bit:c0|Add0~31 ; |part3|counter_26bit:c0|Add0~31 ; out0             ;
+; |part3|counter_26bit:c0|Add0~32 ; |part3|counter_26bit:c0|Add0~32 ; out0             ;
+; |part3|counter_26bit:c0|Add0~33 ; |part3|counter_26bit:c0|Add0~33 ; out0             ;
+; |part3|counter_26bit:c0|Add0~34 ; |part3|counter_26bit:c0|Add0~34 ; out0             ;
+; |part3|counter_26bit:c0|Add0~35 ; |part3|counter_26bit:c0|Add0~35 ; out0             ;
+; |part3|counter_26bit:c0|Add0~36 ; |part3|counter_26bit:c0|Add0~36 ; out0             ;
+; |part3|counter_26bit:c0|Add0~37 ; |part3|counter_26bit:c0|Add0~37 ; out0             ;
+; |part3|counter_26bit:c0|Add0~38 ; |part3|counter_26bit:c0|Add0~38 ; out0             ;
+; |part3|counter_26bit:c0|Add0~39 ; |part3|counter_26bit:c0|Add0~39 ; out0             ;
+; |part3|counter_26bit:c0|Add0~40 ; |part3|counter_26bit:c0|Add0~40 ; out0             ;
+; |part3|counter_26bit:c0|Add0~41 ; |part3|counter_26bit:c0|Add0~41 ; out0             ;
+; |part3|counter_26bit:c0|Add0~42 ; |part3|counter_26bit:c0|Add0~42 ; out0             ;
+; |part3|counter_26bit:c0|Add0~43 ; |part3|counter_26bit:c0|Add0~43 ; out0             ;
+; |part3|counter_26bit:c0|Add0~44 ; |part3|counter_26bit:c0|Add0~44 ; out0             ;
+; |part3|counter_26bit:c0|Add0~45 ; |part3|counter_26bit:c0|Add0~45 ; out0             ;
+; |part3|counter_26bit:c0|Add0~46 ; |part3|counter_26bit:c0|Add0~46 ; out0             ;
+; |part3|counter_26bit:c0|Add0~47 ; |part3|counter_26bit:c0|Add0~47 ; out0             ;
+; |part3|counter_26bit:c0|Add0~48 ; |part3|counter_26bit:c0|Add0~48 ; out0             ;
++---------------------------------+---------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Simulator
+    Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Oct 24 01:03:24 2014
+Info: Command: quartus_sim --simulation_results_format=VWF part3 -c part3
+Info (324025): Using vector source file "C:/Users/LostWolf/Desktop/ece241 lab/3/Waveform1.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is       7.42 %
+Info (328052): Number of transitions in simulation is 129
+Info (324045): Vector file part3.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 32-bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 229 megabytes
+    Info: Processing ended: Fri Oct 24 01:03:25 2014
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

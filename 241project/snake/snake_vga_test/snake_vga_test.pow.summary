@@ -1,0 +1,12 @@
+PowerPlay Power Analyzer Status : Successful - Thu Aug 04 21:33:23 2011
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : snake_vga_test
+Top-level Entity Name : snake_vga_test
+Family : Stratix II
+Device : EP2S15F484C3
+Power Models : Final
+Total Thermal Power Dissipation : 323.76 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 302.97 mW
+I/O Thermal Power Dissipation : 20.78 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

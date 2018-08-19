@@ -1,0 +1,15 @@
+
+State Machine - |snake_vga_test|snake_game_process:U4|game_current_process
+Name game_current_process.wining game_current_process.game_over game_current_process.game game_current_process.ready 
+game_current_process.ready 0 0 0 0 
+game_current_process.game 0 0 1 1 
+game_current_process.game_over 0 1 0 1 
+game_current_process.wining 1 0 0 1 
+
+State Machine - |snake_vga_test|moving_snake:U3|moving_cstate
+Name moving_cstate.snake_right moving_cstate.snake_left moving_cstate.snake_down moving_cstate.snake_up moving_cstate.idle 
+moving_cstate.idle 0 0 0 0 0 
+moving_cstate.snake_up 0 0 0 1 1 
+moving_cstate.snake_down 0 0 1 0 1 
+moving_cstate.snake_left 0 1 0 0 1 
+moving_cstate.snake_right 1 0 0 0 1 
